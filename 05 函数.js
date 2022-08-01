@@ -42,6 +42,11 @@ let simple08 = (name, age) => ({name: name, age: age});
 let rs = simple08('姓名', 22);
 console.debug('simple08: ', rs.name, rs.age);
 
+// 08 的另外写法
+let simple09 = (name, age) => ({name, age});
+let {name, age} = simple09('姓名', 22);
+console.debug('simple09: ', name, age);
+
 // 定义函数
 // ['simple09']() {
 //     console.log('simple09');
