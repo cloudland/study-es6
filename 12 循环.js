@@ -6,6 +6,11 @@ console.debug(r1);
 let r2 = [1, undefined, 3].map((x = 'yes') => x);
 console.debug(r2);
 
+// 注意：这里需要注意的是使用箭头函数返回一个对象时不能直接去写 {}, 要在对象后面加上括号 ({})，防止和函数后面的大括号冲突而报错
+// ...data 表示把对象解构出来, value 针对单独的值进行替换
+let r3 = [{"name": "", "date": "2022-11-09", "value": "9"}].map(data => ({...data, value: +data.value}))
+console.debug(r3);
+
 let es6 = {
     edition: 6,
     committee: "TC39",
